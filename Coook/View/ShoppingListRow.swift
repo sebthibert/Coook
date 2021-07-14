@@ -16,8 +16,13 @@ struct ShoppingListRow: View {
               .foregroundColor(.secondary)
           }
         }
+        Spacer()
       }
+      .padding()
+      .background(Color.white)
+      .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
       IngredientsView(isEditable: true, ingredientLists: viewModel.recipe.ingredientListsWithIngredients)
+        .padding(.horizontal)
     }
   }
 }
