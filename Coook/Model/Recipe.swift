@@ -17,9 +17,14 @@ struct Recipe: Codable, Identifiable {
     [title, summary]
       .compactMap { $0 }
       .joined(separator: " ")
+      .contains(keyword) ||
+    (ingredient_lists ?? [])
+      .flatMap { $0.ingredients ?? [] }
+      .map { $0.description }
+      .joined(separator: " ")
       .contains(keyword)
   }
-
+  
   var totalCookingTime: String? {
     guard let prepTime = prep_time_mins, let cookTime = cook_time_mins else { return nil }
     let totalTime = prepTime + cookTime
@@ -47,7 +52,7 @@ struct Recipe: Codable, Identifiable {
       let preparation_instructions_past: String?
       let unit: QuantityLocalized?
 
-      var description: String? {
+      var description: String {
         var description = ""
         if let quantity = quantity {
           description += quantity.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", quantity) : String(quantity)
