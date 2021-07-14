@@ -21,6 +21,10 @@ extension UserDefaults {
     standard.object(forKey: "\(keyPrefix) \(recipe.id)") as? Data
   }
 
+  static func getAllRecipeKeys() -> [String] {
+    standard.dictionaryRepresentation().keys.filter { $0.contains(keyPrefix) }
+  }
+
   static func getFavourite(recipe: Recipe) -> Recipe? {
     guard let encodedRecipe = data(for: recipe) else {
       return nil
