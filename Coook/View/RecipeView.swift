@@ -3,6 +3,7 @@ import SwiftUI
 struct RecipeView: View {
   let viewModel: RecipeViewModel
   @State private var showingSheet = false
+  @State var isFavourited: Bool = false
 
   var body: some View {
     ScrollView {
@@ -27,18 +28,36 @@ struct RecipeView: View {
       }
     }
     .onAppear {
+      isFavourited = UserDefaults.isRecipeFavourited(viewModel.recipe)
       viewModel.loadingImageViewModel.getImage(path: viewModel.recipe.photo?.urls?.medium)
     }
     .navigationBarTitleDisplayMode(.inline)
-    .navigationBarItems(trailing: Button(action: {
-      showingSheet.toggle()
-    }, label: {
+    .navigationBarItems(trailing:
+                          HStack {
+      Button(action: {
+        toggleFavourite()
+      }, label: {
+        Image(systemName: isFavourited ? "heart.fill" : "heart")
+      })
+      Button(action: {
+        showingSheet.toggle()
+      }, label: {
         Image(systemName: "timer")
-    })
+      })
+    }
                           .sheet(isPresented: $showingSheet) {
       TimersView(viewModel: viewModel)
-                          }
+    }
     )
   }
-}
 
+  func toggleFavourite() {
+    if UserDefaults.isRecipeFavourited(viewModel.recipe) {
+      UserDefaults.removeFavourite(recipe: viewModel.recipe)
+      isFavourited = false
+    } else {
+      UserDefaults.setFavourite(recipe: viewModel.recipe)
+      isFavourited = true
+    }
+  }
+}
