@@ -9,4 +9,8 @@ class RecipeViewModel: ObservableObject {
     self.recipe = recipe
     self.loadingImageViewModel.getImage(path: recipe.photo?.urls?.small)
   }
+
+  var shareString: String {
+    recipe.web_view ?? ""
+  }
 }

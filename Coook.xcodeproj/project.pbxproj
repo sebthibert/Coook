@@ -29,6 +29,9 @@
 		BC193CC9269EE0E200390B47 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CC8269EE0E200390B47 /* ProfileView.swift */; };
 		BC193CCB269EEA6900390B47 /* FavouriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */; };
 		BC193CCD269EEA7D00390B47 /* FavouriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCC269EEA7D00390B47 /* FavouriteRecipesViewModel.swift */; };
+		BC193CCF269EF03100390B47 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCE269EF03100390B47 /* ActivityViewController.swift */; };
+		BC193CD1269EF04700390B47 /* ShareSheetModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CD0269EF04700390B47 /* ShareSheetModifer.swift */; };
+		BC193CD3269EF06200390B47 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CD2269EF06200390B47 /* ViewExtension.swift */; };
 		BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C76268C6E3100D851F8 /* CoookApp.swift */; };
 		BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C78268C6E3100D851F8 /* HomeView.swift */; };
 		BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		BC193CC8269EE0E200390B47 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesView.swift; sourceTree = "<group>"; };
 		BC193CCC269EEA7D00390B47 /* FavouriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesViewModel.swift; sourceTree = "<group>"; };
+		BC193CCE269EF03100390B47 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		BC193CD0269EF04700390B47 /* ShareSheetModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetModifer.swift; sourceTree = "<group>"; };
+		BC193CD2269EF06200390B47 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		BC8A7C73268C6E3100D851F8 /* Coook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8A7C76268C6E3100D851F8 /* CoookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoookApp.swift; sourceTree = "<group>"; };
 		BC8A7C78268C6E3100D851F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		BC193CB0269ECC8300390B47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC193CCE269EF03100390B47 /* ActivityViewController.swift */,
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
 				BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */,
@@ -101,9 +108,11 @@
 				BC193CBA269ECD3300390B47 /* RecipeGridItem.swift */,
 				BC193CB8269ECD0900390B47 /* RecipeView.swift */,
 				BC193C9D269ECB9700390B47 /* RoundedText.swift */,
+				BC193CD0269EF04700390B47 /* ShareSheetModifer.swift */,
 				BC193CA3269ECBE500390B47 /* StepsView.swift */,
 				BC193CB4269ECCC900390B47 /* TimersView.swift */,
 				BC193CA9269ECC3000390B47 /* TimerView.swift */,
+				BC193CD2269EF06200390B47 /* ViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +248,8 @@
 				BC193CCB269EEA6900390B47 /* FavouriteRecipesView.swift in Sources */,
 				BC193CCD269EEA7D00390B47 /* FavouriteRecipesViewModel.swift in Sources */,
 				BC193CC5269ED9E600390B47 /* UserDefaults.swift in Sources */,
+				BC193CCF269EF03100390B47 /* ActivityViewController.swift in Sources */,
+				BC193CD3269EF06200390B47 /* ViewExtension.swift in Sources */,
 				BC193C9E269ECB9700390B47 /* RoundedText.swift in Sources */,
 				BC193CA4269ECBE500390B47 /* StepsView.swift in Sources */,
 				BC193CA6269ECBFD00390B47 /* IngredientsView.swift in Sources */,
@@ -250,6 +261,7 @@
 				BC193CB9269ECD0900390B47 /* RecipeView.swift in Sources */,
 				BC193CA8269ECC1B00390B47 /* ProgressBar.swift in Sources */,
 				BC193CB7269ECCE000390B47 /* TimersViewModel.swift in Sources */,
+				BC193CD1269EF04700390B47 /* ShareSheetModifer.swift in Sources */,
 				BC193CBB269ECD3300390B47 /* RecipeGridItem.swift in Sources */,
 				BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */,
 				BC193CB5269ECCC900390B47 /* TimersView.swift in Sources */,

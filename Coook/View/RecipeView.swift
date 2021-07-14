@@ -4,6 +4,7 @@ struct RecipeView: View {
   let viewModel: RecipeViewModel
   @State private var showingSheet = false
   @State var isFavourited: Bool = false
+  @State var showShareSheet = false
 
   var body: some View {
     ScrollView {
@@ -39,6 +40,12 @@ struct RecipeView: View {
       }, label: {
         Image(systemName: isFavourited ? "heart.fill" : "heart")
       })
+      Button(action: {
+        showShareSheet.toggle()
+      }, label: {
+        Image(systemName: "square.and.arrow.up")
+      })
+      .shareSheet(showShareSheet: $showShareSheet, items: [viewModel.shareString])
       Button(action: {
         showingSheet.toggle()
       }, label: {

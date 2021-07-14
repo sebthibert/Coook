@@ -11,6 +11,7 @@ struct Recipe: Codable, Identifiable {
   let photo: Collection.Image?
   let ingredient_lists: [IngredientList]?
   let recipe_step_lists: [StepList]?
+  let web_view: String?
 
   var totalCookingTime: String? {
     guard let prepTime = prep_time_mins, let cookTime = cook_time_mins else { return nil }
