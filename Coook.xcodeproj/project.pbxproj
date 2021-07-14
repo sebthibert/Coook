@@ -136,7 +136,9 @@
 				BC8A7C75268C6E3100D851F8 /* Coook */,
 				BC8A7C74268C6E3100D851F8 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		BC8A7C74268C6E3100D851F8 /* Products */ = {
 			isa = PBXGroup;

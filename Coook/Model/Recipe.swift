@@ -13,6 +13,13 @@ struct Recipe: Codable, Identifiable {
   let recipe_step_lists: [StepList]?
   let web_view: String?
 
+  func containsKeyword(_ keyword: String) -> Bool {
+    [title, summary]
+      .compactMap { $0 }
+      .joined(separator: " ")
+      .contains(keyword)
+  }
+
   var totalCookingTime: String? {
     guard let prepTime = prep_time_mins, let cookTime = cook_time_mins else { return nil }
     let totalTime = prepTime + cookTime

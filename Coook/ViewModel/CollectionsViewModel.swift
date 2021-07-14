@@ -2,7 +2,9 @@ import Combine
 import SwiftUI
 
 class CollectionsViewModel: ObservableObject {
-  @Published var collections: [Collection] = []
+  @Published var featuredCollection: Collection? = nil
+  @Published var allCollections: [Collection] = []
+
   private var cancellable: Cancellable?
 
   func getCollections() {
@@ -15,7 +17,8 @@ class CollectionsViewModel: ObservableObject {
       .sink(
         receiveCompletion: { _ in },
         receiveValue: { collections in
-        self.collections = collections
+        self.featuredCollection = collections.first
+        self.allCollections = Array(collections.dropFirst())
       }
       )
   }
