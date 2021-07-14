@@ -21,11 +21,12 @@ extension UserDefaults {
     standard.object(forKey: "\(keyPrefix) \(recipe.id)") as? Data
   }
 
-  static func getAllRecipeKeys() -> [String] {
-    standard.dictionaryRepresentation().keys.filter { $0.contains(keyPrefix) }
+  static func getAllRecipes() -> [Recipe] {
+    let keys = standard.dictionaryRepresentation().keys.filter { $0.contains(keyPrefix) }
+    return keys.map { getFavourite(recipeKey: $0) }
   }
 
-  static func getFavourite(recipeKey: String) -> Recipe {
+  private static func getFavourite(recipeKey: String) -> Recipe {
     let encodedRecipe = standard.object(forKey: recipeKey) as! Data
     let recipe = try! JSONDecoder().decode(Recipe.self, from: encodedRecipe)
     return recipe

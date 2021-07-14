@@ -23,7 +23,7 @@ struct HomeView: View {
     }
     .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
-          NavigationLink(destination: Text("Hello")) {
+          NavigationLink(destination: ProfileView()) {
             Image(systemName: "person.crop.circle.fill")
           }
         }

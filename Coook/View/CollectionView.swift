@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CollectionView: View {
-  @ObservedObject var viewModel: CollectionViewModel
+  var viewModel: RecipesViewModel
 
   var body: some View {
     ScrollView {
@@ -13,8 +13,8 @@ struct CollectionView: View {
         }
       }
       .padding()
-      .background(Color(.systemGroupedBackground))
     }
-    .navigationBarTitle(Text(viewModel.collection?.title ?? "No title"))
+    .background(Color(.systemGroupedBackground))
+    .navigationBarTitle(Text(viewModel.title))
   }
 }
