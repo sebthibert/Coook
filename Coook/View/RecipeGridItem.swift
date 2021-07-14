@@ -19,7 +19,7 @@ struct RecipeGridItem: View {
         }
         HStack {
           if let time = viewModel.recipe.totalCookingTime {
-            RoundedText(text: time, style: .caption, weight: .bold)
+            RoundedText(text: "\(time)m", style: .caption, weight: .bold)
               .foregroundColor(.secondary)
           }
           Spacer()

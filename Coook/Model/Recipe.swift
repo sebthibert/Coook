@@ -25,11 +25,11 @@ struct Recipe: Codable, Identifiable {
       .contains(keyword)
   }
   
-  var totalCookingTime: String? {
-    guard let prepTime = prep_time_mins, let cookTime = cook_time_mins else { return nil }
+  var totalCookingTime: Int {
+    guard let prepTime = prep_time_mins, let cookTime = cook_time_mins else { return 0 }
     let totalTime = prepTime + cookTime
-    guard totalTime != 0 else { return nil }
-    return "\(totalTime)m"
+    guard totalTime != 0 else { return 0 }
+    return totalTime
   }
 
   var ingredientListsWithIngredients: [IngredientList] {
