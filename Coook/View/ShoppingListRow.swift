@@ -17,6 +17,12 @@ struct ShoppingListRow: View {
           }
         }
         Spacer()
+        Button {
+          UserDefaults.removeShoppingList(forRecipe: viewModel.recipe)
+          viewModel.getShoppingLists()
+        } label: {
+          Image(systemName: "trash")
+        }
       }
       .padding()
       .background(Color.white)

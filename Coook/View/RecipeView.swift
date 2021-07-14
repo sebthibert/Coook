@@ -37,7 +37,7 @@ struct RecipeView: View {
     .navigationBarTitleDisplayMode(.inline)
     .navigationBarItems(trailing:
                           HStack {
-      if viewModel.recipe.ingredient_lists?.count == 1 {
+      if viewModel.recipe.ingredientListsWithIngredients.count == 1 {
         Button(action: {
           toggleShoppingList()
         }, label: {

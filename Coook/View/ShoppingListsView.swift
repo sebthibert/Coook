@@ -5,10 +5,14 @@ struct ShoppingListsView: View {
 
   var body: some View {
     ScrollView {
-      ForEach(viewModel.shoppingLists) { recipe in
-        Section {
-          ShoppingListRow(viewModel: ShoppingListViewModel(recipe: recipe))
-            .padding(.horizontal)
+      if viewModel.shoppingLists.isEmpty {
+        EmptyShoppingListView(description: "You don't have any ingredients in your shopping list yet!", imageName: "text.badge.plus", instruction: "to add ingredients for a recipe.")
+      } else {
+        ForEach(viewModel.shoppingLists) { recipe in
+          Section {
+            ShoppingListRow(viewModel: ShoppingListViewModel(recipe: recipe, getShoppingLists: viewModel.getShoppingLists))
+              .padding(.horizontal)
+          }
         }
       }
     }

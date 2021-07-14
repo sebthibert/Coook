@@ -35,6 +35,7 @@
 		BC193CD9269F05E000390B47 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CD8269F05E000390B47 /* ShoppingListViewModel.swift */; };
 		BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDA269F05F900390B47 /* ShoppingListRow.swift */; };
 		BC193CDD269F062600390B47 /* ShoppingListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDC269F062600390B47 /* ShoppingListsView.swift */; };
+		BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */; };
 		BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C76268C6E3100D851F8 /* CoookApp.swift */; };
 		BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C78268C6E3100D851F8 /* HomeView.swift */; };
 		BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		BC193CD8269F05E000390B47 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
 		BC193CDA269F05F900390B47 /* ShoppingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListRow.swift; sourceTree = "<group>"; };
 		BC193CDC269F062600390B47 /* ShoppingListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListsView.swift; sourceTree = "<group>"; };
+		BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyShoppingListView.swift; sourceTree = "<group>"; };
 		BC8A7C73268C6E3100D851F8 /* Coook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8A7C76268C6E3100D851F8 /* CoookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoookApp.swift; sourceTree = "<group>"; };
 		BC8A7C78268C6E3100D851F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				BC193CCE269EF03100390B47 /* ActivityViewController.swift */,
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
+				BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */,
 				BC8A7C78268C6E3100D851F8 /* HomeView.swift */,
 				BC193CA5269ECBFD00390B47 /* IngredientsView.swift */,
 				BC193C9F269ECBB400390B47 /* LoadingImage.swift */,
@@ -289,6 +292,7 @@
 				BC193CD5269F05A000390B47 /* UserDefaultsShoppingLists.swift in Sources */,
 				BC193CAF269ECC7A00390B47 /* Recipe.swift in Sources */,
 				BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */,
+				BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
