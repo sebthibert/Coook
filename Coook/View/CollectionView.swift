@@ -21,10 +21,10 @@ struct CollectionView: View {
       ForEach(sectionedRecipes) { section in
         VStack {
           HStack {
-            Image(systemName: "clock")
-            Text("\(section.mins) minutes total")
+            Text("\(section.mins)m")
               .bold()
               .padding()
+            Image(systemName: "clock")
             Spacer()
           }
           .background(.white)
