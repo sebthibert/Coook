@@ -26,8 +26,6 @@
 		BC193CC1269ECD6E00390B47 /* CollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CC0269ECD6E00390B47 /* CollectionRow.swift */; };
 		BC193CC3269ECD8100390B47 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CC2269ECD8100390B47 /* CollectionViewModel.swift */; };
 		BC193CC5269ED9E600390B47 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CC4269ED9E600390B47 /* UserDefaults.swift */; };
-		BC193CC9269EE0E200390B47 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CC8269EE0E200390B47 /* ProfileView.swift */; };
-		BC193CCB269EEA6900390B47 /* FavouriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */; };
 		BC193CCD269EEA7D00390B47 /* FavouriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCC269EEA7D00390B47 /* FavouriteRecipesViewModel.swift */; };
 		BC193CCF269EF03100390B47 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CCE269EF03100390B47 /* ActivityViewController.swift */; };
 		BC193CD1269EF04700390B47 /* ShareSheetModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CD0269EF04700390B47 /* ShareSheetModifer.swift */; };
@@ -59,8 +57,6 @@
 		BC193CC0269ECD6E00390B47 /* CollectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRow.swift; sourceTree = "<group>"; };
 		BC193CC2269ECD8100390B47 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		BC193CC4269ED9E600390B47 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		BC193CC8269EE0E200390B47 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesView.swift; sourceTree = "<group>"; };
 		BC193CCC269EEA7D00390B47 /* FavouriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesViewModel.swift; sourceTree = "<group>"; };
 		BC193CCE269EF03100390B47 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		BC193CD0269EF04700390B47 /* ShareSheetModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetModifer.swift; sourceTree = "<group>"; };
@@ -99,11 +95,9 @@
 				BC193CCE269EF03100390B47 /* ActivityViewController.swift */,
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
-				BC193CCA269EEA6900390B47 /* FavouriteRecipesView.swift */,
 				BC8A7C78268C6E3100D851F8 /* HomeView.swift */,
 				BC193CA5269ECBFD00390B47 /* IngredientsView.swift */,
 				BC193C9F269ECBB400390B47 /* LoadingImage.swift */,
-				BC193CC8269EE0E200390B47 /* ProfileView.swift */,
 				BC193CA7269ECC1B00390B47 /* ProgressBar.swift */,
 				BC193CBA269ECD3300390B47 /* RecipeGridItem.swift */,
 				BC193CB8269ECD0900390B47 /* RecipeView.swift */,
@@ -247,7 +241,6 @@
 				BC193CAD269ECC5500390B47 /* Collection.swift in Sources */,
 				BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */,
 				BC193CC3269ECD8100390B47 /* CollectionViewModel.swift in Sources */,
-				BC193CCB269EEA6900390B47 /* FavouriteRecipesView.swift in Sources */,
 				BC193CCD269EEA7D00390B47 /* FavouriteRecipesViewModel.swift in Sources */,
 				BC193CC5269ED9E600390B47 /* UserDefaults.swift in Sources */,
 				BC193CCF269EF03100390B47 /* ActivityViewController.swift in Sources */,
@@ -267,7 +260,6 @@
 				BC193CBB269ECD3300390B47 /* RecipeGridItem.swift in Sources */,
 				BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */,
 				BC193CB5269ECCC900390B47 /* TimersView.swift in Sources */,
-				BC193CC9269EE0E200390B47 /* ProfileView.swift in Sources */,
 				BC193CAF269ECC7A00390B47 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

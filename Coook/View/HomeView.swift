@@ -21,13 +21,6 @@ struct HomeView: View {
         }
       }
     }
-    .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          NavigationLink(destination: ProfileView()) {
-            Image(systemName: "person.crop.circle.fill")
-          }
-        }
-    }
     .onAppear {
       viewModel.getCollections()
     }

@@ -1,4 +1,5 @@
+import Foundation
 struct FavouriteRecipesViewModel: RecipesViewModel {
-  let recipes: [Recipe]
+  let recipes = UserDefaults.getAllRecipes()
   let title = "Favourite Recipes"
 }

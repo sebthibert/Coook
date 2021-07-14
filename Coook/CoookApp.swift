@@ -8,10 +8,22 @@ struct CoookApp: App {
   
   var body: some Scene {
     WindowGroup {
-      NavigationView {
-        HomeView(viewModel: viewModel)
-          .navigationBarTitle(Text("Cook with M&S"))
+      TabView {
+        NavigationView {
+          HomeView(viewModel: viewModel)
+            .navigationBarTitle(Text("Cook with M&S"))
+        }
+        .tabItem {
+          Label("Home", systemImage: "house")
+        }
+        NavigationView {
+          CollectionView(viewModel: FavouriteRecipesViewModel())
+        }
+        .tabItem {
+          Label("Favourites", systemImage: "heart")
+        }
       }
+
       .onAppear {
         decodeRecipes()
       }
