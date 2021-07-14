@@ -25,8 +25,8 @@ extension UserDefaults {
     standard.dictionaryRepresentation().keys.filter { $0.contains(keyPrefix) }
   }
 
-  static func getFavourite(recipe: Recipe) -> Recipe {
-    let encodedRecipe = data(for: recipe)!
+  static func getFavourite(recipeKey: String) -> Recipe {
+    let encodedRecipe = standard.object(forKey: recipeKey) as! Data
     let recipe = try! JSONDecoder().decode(Recipe.self, from: encodedRecipe)
     return recipe
   }
