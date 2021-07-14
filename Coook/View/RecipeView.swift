@@ -4,6 +4,7 @@ struct RecipeView: View {
   let viewModel: RecipeViewModel
   @State private var showingSheet = false
   @State var isFavourited: Bool = false
+  @State var isShoppingListSaved: Bool = false
   @State var showShareSheet = false
 
   var body: some View {
@@ -19,7 +20,7 @@ struct RecipeView: View {
             RoundedText(text: summary, style: .callout, weight: .regular)
           }
           if let ingredientLists = viewModel.recipe.ingredientListsWithIngredients {
-            IngredientsView(ingredientLists: ingredientLists)
+            IngredientsView(isEditable: false, ingredientLists: ingredientLists)
           }
           if let stepLists = viewModel.recipe.recipeStepListsWithSteps {
             StepsView(viewModel: viewModel.timersViewModel, stepLists: stepLists, showingSheet: $showingSheet)
@@ -30,11 +31,19 @@ struct RecipeView: View {
     }
     .onAppear {
       isFavourited = UserDefaults.isRecipeFavourited(viewModel.recipe)
+      isShoppingListSaved = UserDefaults.isShoppingListSaved(viewModel.recipe)
       viewModel.loadingImageViewModel.getImage(path: viewModel.recipe.photo?.urls?.medium)
     }
     .navigationBarTitleDisplayMode(.inline)
     .navigationBarItems(trailing:
                           HStack {
+      if viewModel.recipe.ingredient_lists?.count == 1 {
+        Button(action: {
+          toggleShoppingList()
+        }, label: {
+          Image(systemName: isShoppingListSaved ? "text.badge.minus" : "text.badge.plus")
+        })
+      }
       Button(action: {
         toggleFavourite()
       }, label: {
@@ -65,6 +74,16 @@ struct RecipeView: View {
     } else {
       UserDefaults.setFavourite(recipe: viewModel.recipe)
       isFavourited = true
+    }
+  }
+
+  func toggleShoppingList() {
+    if UserDefaults.isShoppingListSaved(viewModel.recipe) {
+      UserDefaults.removeShoppingList(forRecipe: viewModel.recipe)
+      isShoppingListSaved = false
+    } else {
+      UserDefaults.setShoppingList(forRecipe: viewModel.recipe)
+      isShoppingListSaved = true
     }
   }
 }

@@ -1,28 +1,28 @@
 import Foundation
 
 extension UserDefaults {
-  static let keyPrefix = "MSCookRecipe:"
+  static let recipeKeyPrefix = "MSCookRecipe:"
 
   static func setFavourite(recipe: Recipe) {
     if let encodedRecipe = try? JSONEncoder().encode(recipe) {
-      standard.set(encodedRecipe, forKey: "\(keyPrefix) \(recipe.id)")
+      standard.set(encodedRecipe, forKey: "\(recipeKeyPrefix) \(recipe.id)")
     }
   }
 
   static func removeFavourite(recipe: Recipe) {
-    standard.removeObject(forKey: "\(keyPrefix) \(recipe.id)")
+    standard.removeObject(forKey: "\(recipeKeyPrefix) \(recipe.id)")
   }
 
   static func isRecipeFavourited(_ recipe: Recipe) -> Bool {
-    data(for: recipe) != nil
+    data(forRecipe: recipe) != nil
   }
 
-  private static func data(for recipe: Recipe) -> Data? {
-    standard.object(forKey: "\(keyPrefix) \(recipe.id)") as? Data
+  private static func data(forRecipe recipe: Recipe) -> Data? {
+    standard.object(forKey: "\(recipeKeyPrefix) \(recipe.id)") as? Data
   }
 
   static func getAllRecipes() -> [Recipe] {
-    let keys = standard.dictionaryRepresentation().keys.filter { $0.contains(keyPrefix) }
+    let keys = standard.dictionaryRepresentation().keys.filter { $0.contains(recipeKeyPrefix) }
     return keys.map { getFavourite(recipeKey: $0) }
   }
 

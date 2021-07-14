@@ -22,6 +22,12 @@ struct CoookApp: App {
         .tabItem {
           Label("Favourites", systemImage: "heart")
         }
+        NavigationView {
+          ShoppingListsView(viewModel: ShoppingListsViewModel())
+        }
+        .tabItem {
+          Label("Shopping Lists", systemImage: "list.bullet")
+        }
       }
 
       .onAppear {

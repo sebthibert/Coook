@@ -1,5 +1,5 @@
 import Foundation
 struct FavouriteRecipesViewModel: RecipesViewModel {
   let recipes = UserDefaults.getAllRecipes()
-  let title = "Favourite Recipes"
+  let title = "Favourites"
 }
