@@ -12,6 +12,7 @@ struct ARView: View {
       }
       .padding()
     }
+    .edgesIgnoringSafeArea(.all)
   }
 }
 
