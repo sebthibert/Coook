@@ -36,6 +36,9 @@
 		BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDA269F05F900390B47 /* ShoppingListRow.swift */; };
 		BC193CDD269F062600390B47 /* ShoppingListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDC269F062600390B47 /* ShoppingListsView.swift */; };
 		BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */; };
+		BC6D0F2926A033BA00B74E8A /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2826A033BA00B74E8A /* IngredientView.swift */; };
+		BC6D0F2B26A033E500B74E8A /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2A26A033E500B74E8A /* FocusedView.swift */; };
+		BC6D0F2D26A033F600B74E8A /* StepVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2C26A033F600B74E8A /* StepVStack.swift */; };
 		BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C76268C6E3100D851F8 /* CoookApp.swift */; };
 		BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C78268C6E3100D851F8 /* HomeView.swift */; };
 		BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */; };
@@ -74,6 +77,9 @@
 		BC193CDA269F05F900390B47 /* ShoppingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListRow.swift; sourceTree = "<group>"; };
 		BC193CDC269F062600390B47 /* ShoppingListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListsView.swift; sourceTree = "<group>"; };
 		BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyShoppingListView.swift; sourceTree = "<group>"; };
+		BC6D0F2826A033BA00B74E8A /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
+		BC6D0F2A26A033E500B74E8A /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
+		BC6D0F2C26A033F600B74E8A /* StepVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepVStack.swift; sourceTree = "<group>"; };
 		BC8A7C73268C6E3100D851F8 /* Coook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8A7C76268C6E3100D851F8 /* CoookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoookApp.swift; sourceTree = "<group>"; };
 		BC8A7C78268C6E3100D851F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -110,8 +116,10 @@
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
 				BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */,
+				BC6D0F2A26A033E500B74E8A /* FocusedView.swift */,
 				BC8A7C78268C6E3100D851F8 /* HomeView.swift */,
 				BC193CA5269ECBFD00390B47 /* IngredientsView.swift */,
+				BC6D0F2826A033BA00B74E8A /* IngredientView.swift */,
 				BC193C9F269ECBB400390B47 /* LoadingImage.swift */,
 				BC193CA7269ECC1B00390B47 /* ProgressBar.swift */,
 				BC193CBA269ECD3300390B47 /* RecipeGridItem.swift */,
@@ -121,6 +129,7 @@
 				BC193CDA269F05F900390B47 /* ShoppingListRow.swift */,
 				BC193CDC269F062600390B47 /* ShoppingListsView.swift */,
 				BC193CA3269ECBE500390B47 /* StepsView.swift */,
+				BC6D0F2C26A033F600B74E8A /* StepVStack.swift */,
 				BC193CB4269ECCC900390B47 /* TimersView.swift */,
 				BC193CA9269ECC3000390B47 /* TimerView.swift */,
 				BC193CD2269EF06200390B47 /* ViewExtension.swift */,
@@ -265,6 +274,7 @@
 				BC193CB3269ECCA400390B47 /* CollectionsViewModel.swift in Sources */,
 				BC193CAA269ECC3000390B47 /* TimerView.swift in Sources */,
 				BC193CAD269ECC5500390B47 /* Collection.swift in Sources */,
+				BC6D0F2D26A033F600B74E8A /* StepVStack.swift in Sources */,
 				BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */,
 				BC193CC3269ECD8100390B47 /* CollectionViewModel.swift in Sources */,
 				BC193CCD269EEA7D00390B47 /* FavouriteRecipesViewModel.swift in Sources */,
@@ -281,6 +291,7 @@
 				BC193CBD269ECD4500390B47 /* CollectionView.swift in Sources */,
 				BC193CBF269ECD5A00390B47 /* RecipeViewModel.swift in Sources */,
 				BC193CD9269F05E000390B47 /* ShoppingListViewModel.swift in Sources */,
+				BC6D0F2926A033BA00B74E8A /* IngredientView.swift in Sources */,
 				BC193CB9269ECD0900390B47 /* RecipeView.swift in Sources */,
 				BC193CA8269ECC1B00390B47 /* ProgressBar.swift in Sources */,
 				BC193CB7269ECCE000390B47 /* TimersViewModel.swift in Sources */,
@@ -290,6 +301,7 @@
 				BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */,
 				BC193CB5269ECCC900390B47 /* TimersView.swift in Sources */,
 				BC193CD5269F05A000390B47 /* UserDefaultsShoppingLists.swift in Sources */,
+				BC6D0F2B26A033E500B74E8A /* FocusedView.swift in Sources */,
 				BC193CAF269ECC7A00390B47 /* Recipe.swift in Sources */,
 				BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */,
 				BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */,

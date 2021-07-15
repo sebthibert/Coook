@@ -91,6 +91,14 @@ struct Recipe: Codable, Identifiable {
     let title: String?
     let recipe_steps: [Step]?
 
+    var focusedTitle: String {
+      if let title = title, !title.isEmpty {
+        return "For the \(title)"
+      } else {
+        return "For the rest"
+      }
+    }
+
     var stepsWithTimers: [StepWithTimer] {
       let steps = recipe_steps ?? []
       return steps.compactMap { StepWithTimer(from: $0) }

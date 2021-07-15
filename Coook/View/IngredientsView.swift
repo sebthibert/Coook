@@ -1,13 +1,25 @@
 import SwiftUI
 
 struct IngredientsView: View {
+  let recipe: Recipe?
   let isEditable: Bool
   let ingredientLists: [Recipe.IngredientList]
+  @State var isShoppingListSaved: Bool = false
 
   var body: some View {
     VStack(alignment: .leading, spacing: 16) {
       if isEditable == false {
-        RoundedText(text: "Ingredients", style: .callout, weight: .bold)
+        HStack {
+          RoundedText(text: "Ingredients", style: .callout, weight: .bold)
+          Spacer()
+          if ingredientLists.count == 1 {
+            Button(action: {
+              toggleShoppingList()
+            }, label: {
+              Image(systemName: isShoppingListSaved ? "text.badge.minus" : "text.badge.plus")
+            })
+          }
+        }
       }
       ForEach(ingredientLists) { ingredientList in
         VStack(alignment: .leading, spacing: 16) {
@@ -21,28 +33,24 @@ struct IngredientsView: View {
         }
       }
     }
+    .onAppear {
+      guard let recipe = recipe else {
+        return
+      }
+      isShoppingListSaved = UserDefaults.isShoppingListSaved(recipe)
+    }
   }
-}
 
-struct IngredientView: View {
-  let isEditable: Bool
-  let ingredient: Recipe.IngredientList.Ingredient
-  @State var ingredientSelected = false
-
-  var body: some View {
-    HStack {
-      if let description = ingredient.description {
-        RoundedText(text: description, style: .footnote, weight: .regular)
-          .foregroundColor(ingredientSelected ? Color.secondary : Color.primary)
-      }
-      if isEditable {
-        Spacer()
-        Button {
-          ingredientSelected.toggle()
-        } label: {
-          Image(systemName: ingredientSelected ? "checkmark.circle.fill" : "circle")
-        }
-      }
+  func toggleShoppingList() {
+    guard let recipe = recipe else {
+      return
+    }
+    if UserDefaults.isShoppingListSaved(recipe) {
+      UserDefaults.removeShoppingList(forRecipe: recipe)
+      isShoppingListSaved = false
+    } else {
+      UserDefaults.setShoppingList(forRecipe: recipe)
+      isShoppingListSaved = true
     }
   }
 }

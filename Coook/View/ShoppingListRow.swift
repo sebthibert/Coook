@@ -27,7 +27,7 @@ struct ShoppingListRow: View {
       .padding()
       .background(Color.white)
       .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-      IngredientsView(isEditable: true, ingredientLists: viewModel.recipe.ingredientListsWithIngredients)
+      IngredientsView(recipe: nil, isEditable: true, ingredientLists: viewModel.recipe.ingredientListsWithIngredients)
         .padding(.horizontal)
     }
   }
