@@ -7,9 +7,10 @@ struct TimerView: View {
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
   var body: some View {
-    HStack(spacing: 16) {
+    HStack {
       RoundedText(text: instructions ?? "No instructions", style: .callout, weight: .regular)
-      ProgressBar(progress: Float(Double(timeRemaining) / Double(totalTime)), timeRemaining: timeRemaining)
+      Spacer()
+      ProgressBar(totalTime: totalTime, timeRemaining: timeRemaining)
         .frame(width: 75, height: 75)
     }
     .onReceive(timer) { time in

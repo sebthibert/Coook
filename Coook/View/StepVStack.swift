@@ -23,7 +23,7 @@ struct StepVStack: View {
         .frame(width: 75, height: 75)
       }
       if showTimer {
-        ProgressBar(progress: Float(Double(timeRemaining) / Double(step.totalTime)), timeRemaining: timeRemaining)
+        ProgressBar(totalTime: step.totalTime, timeRemaining: timeRemaining)
           .frame(width: 75, height: 75)
       }
     }
