@@ -33,7 +33,7 @@ struct LinkSparksView: View {
 
   var connectButton: some View {
     Button {
-
+      viewModel.connectSparks()
     } label: {
       Text("Connect")
         .foregroundColor(.white)
@@ -46,7 +46,7 @@ struct LinkSparksView: View {
 
   var joinButton: some View {
     Button {
-
+      viewModel.joinSparks()
     } label: {
       Text("Not a member? Join Sparks")
         .foregroundColor(.black)
