@@ -1,5 +1,9 @@
 import Foundation
-struct FavouriteRecipesViewModel: RecipesViewModel {
-  let recipes = UserDefaults.getAllRecipes()
-  let title = "Favourites"
+
+class FavouriteRecipesViewModel: ObservableObject {
+  @Published var recipes: [Recipe] = []
+
+  func getRecipes() {
+    recipes = UserDefaults.getAllRecipes()
+  }
 }

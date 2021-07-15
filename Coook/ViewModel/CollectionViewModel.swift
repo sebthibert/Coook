@@ -1,11 +1,6 @@
 import SwiftUI
 
-protocol RecipesViewModel {
-  var recipes: [Recipe] { get }
-  var title: String { get }
-}
-
-class CollectionViewModel: ObservableObject, RecipesViewModel {
+class CollectionViewModel: ObservableObject {
   let collection: Collection?
   @ObservedObject var loadingImageViewModel = LoadingImageViewModel()
 

@@ -3,21 +3,19 @@ import SwiftUI
 var globalRecipes: [Recipe] = []
 
 @main
-struct CoookApp: App {
-  let viewModel = CollectionsViewModel()
-  
+struct CoookApp: App {  
   var body: some Scene {
     WindowGroup {
       TabView {
         NavigationView {
-          HomeView(viewModel: viewModel)
+          HomeView(viewModel: CollectionsViewModel())
             .navigationBarTitle(Text("Cook with M&S"))
         }
         .tabItem {
           Label("Home", systemImage: "house")
         }
         NavigationView {
-          CollectionView(viewModel: FavouriteRecipesViewModel())
+          FavouritesView(viewModel: FavouriteRecipesViewModel())
         }
         .tabItem {
           Label("Favourites", systemImage: "heart")
