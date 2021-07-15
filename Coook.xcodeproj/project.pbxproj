@@ -39,6 +39,11 @@
 		BC6D0F2926A033BA00B74E8A /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2826A033BA00B74E8A /* IngredientView.swift */; };
 		BC6D0F2B26A033E500B74E8A /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2A26A033E500B74E8A /* FocusedView.swift */; };
 		BC6D0F2D26A033F600B74E8A /* StepVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2C26A033F600B74E8A /* StepVStack.swift */; };
+		BC87667B26A03B7B003272DA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC87667A26A03B7B003272DA /* WidgetKit.framework */; };
+		BC87667D26A03B7B003272DA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC87667C26A03B7B003272DA /* SwiftUI.framework */; };
+		BC87668026A03B7B003272DA /* CoookWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC87667F26A03B7B003272DA /* CoookWidget.swift */; };
+		BC87668226A03B7C003272DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC87668126A03B7C003272DA /* Assets.xcassets */; };
+		BC87668626A03B7C003272DA /* CoookWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BC87667826A03B7B003272DA /* CoookWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C76268C6E3100D851F8 /* CoookApp.swift */; };
 		BC8A7C79268C6E3100D851F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8A7C78268C6E3100D851F8 /* HomeView.swift */; };
 		BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */; };
@@ -46,6 +51,30 @@
 		BC8A7C85268C8FC600D851F8 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C84268C8FC600D851F8 /* recipes.json */; };
 		DDC1CA25269EFACD0055FBE7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = DDC1CA24269EFACD0055FBE7 /* Algorithms */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC87668426A03B7C003272DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC8A7C6B268C6E3100D851F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC87667726A03B7B003272DA;
+			remoteInfo = CoookWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC87668726A03B7C003272DA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BC87668626A03B7C003272DA /* CoookWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC193C9D269ECB9700390B47 /* RoundedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedText.swift; sourceTree = "<group>"; };
@@ -80,6 +109,12 @@
 		BC6D0F2826A033BA00B74E8A /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		BC6D0F2A26A033E500B74E8A /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		BC6D0F2C26A033F600B74E8A /* StepVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepVStack.swift; sourceTree = "<group>"; };
+		BC87667826A03B7B003272DA /* CoookWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CoookWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC87667A26A03B7B003272DA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BC87667C26A03B7B003272DA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BC87667F26A03B7B003272DA /* CoookWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoookWidget.swift; sourceTree = "<group>"; };
+		BC87668126A03B7C003272DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC87668326A03B7C003272DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8A7C73268C6E3100D851F8 /* Coook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8A7C76268C6E3100D851F8 /* CoookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoookApp.swift; sourceTree = "<group>"; };
 		BC8A7C78268C6E3100D851F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -89,6 +124,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BC87667526A03B7B003272DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC87667D26A03B7B003272DA /* SwiftUI.framework in Frameworks */,
+				BC87667B26A03B7B003272DA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC8A7C70268C6E3100D851F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,10 +196,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BC87667926A03B7B003272DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC87667A26A03B7B003272DA /* WidgetKit.framework */,
+				BC87667C26A03B7B003272DA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC87667E26A03B7B003272DA /* CoookWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BC87667F26A03B7B003272DA /* CoookWidget.swift */,
+				BC87668126A03B7C003272DA /* Assets.xcassets */,
+				BC87668326A03B7C003272DA /* Info.plist */,
+			);
+			path = CoookWidget;
+			sourceTree = "<group>";
+		};
 		BC8A7C6A268C6E3100D851F8 = {
 			isa = PBXGroup;
 			children = (
 				BC8A7C75268C6E3100D851F8 /* Coook */,
+				BC87667E26A03B7B003272DA /* CoookWidget */,
+				BC87667926A03B7B003272DA /* Frameworks */,
 				BC8A7C74268C6E3100D851F8 /* Products */,
 			);
 			indentWidth = 2;
@@ -166,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8A7C73268C6E3100D851F8 /* Coook.app */,
+				BC87667826A03B7B003272DA /* CoookWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +263,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BC87667726A03B7B003272DA /* CoookWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC87668A26A03B7C003272DA /* Build configuration list for PBXNativeTarget "CoookWidgetExtension" */;
+			buildPhases = (
+				BC87667426A03B7B003272DA /* Sources */,
+				BC87667526A03B7B003272DA /* Frameworks */,
+				BC87667626A03B7B003272DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoookWidgetExtension;
+			productName = CoookWidgetExtension;
+			productReference = BC87667826A03B7B003272DA /* CoookWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BC8A7C72268C6E3100D851F8 /* Coook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8A7C81268C6E3200D851F8 /* Build configuration list for PBXNativeTarget "Coook" */;
@@ -204,10 +287,12 @@
 				BC8A7C6F268C6E3100D851F8 /* Sources */,
 				BC8A7C70268C6E3100D851F8 /* Frameworks */,
 				BC8A7C71268C6E3100D851F8 /* Resources */,
+				BC87668726A03B7C003272DA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BC87668526A03B7C003272DA /* PBXTargetDependency */,
 			);
 			name = Coook;
 			packageProductDependencies = (
@@ -227,6 +312,9 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					BC87667726A03B7B003272DA = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					BC8A7C72268C6E3100D851F8 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -249,11 +337,20 @@
 			projectRoot = "";
 			targets = (
 				BC8A7C72268C6E3100D851F8 /* Coook */,
+				BC87667726A03B7B003272DA /* CoookWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BC87667626A03B7B003272DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC87668226A03B7C003272DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC8A7C71268C6E3100D851F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +364,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BC87667426A03B7B003272DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC87668026A03B7B003272DA /* CoookWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC8A7C6F268C6E3100D851F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,7 +415,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BC87668526A03B7C003272DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC87667726A03B7B003272DA /* CoookWidgetExtension */;
+			targetProxy = BC87668426A03B7C003272DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BC87668826A03B7C003272DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoookWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoookWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = splebbo.Coook.CoookWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC87668926A03B7C003272DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoookWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoookWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = splebbo.Coook.CoookWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BC8A7C7F268C6E3200D851F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +595,7 @@
 		BC8A7C82268C6E3200D851F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +625,7 @@
 		BC8A7C83268C6E3200D851F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +655,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BC87668A26A03B7C003272DA /* Build configuration list for PBXNativeTarget "CoookWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC87668826A03B7C003272DA /* Debug */,
+				BC87668926A03B7C003272DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BC8A7C6E268C6E3100D851F8 /* Build configuration list for PBXProject "Coook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
