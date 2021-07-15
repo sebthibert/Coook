@@ -12,6 +12,7 @@ struct Recipe: Codable, Identifiable {
   let ingredient_lists: [IngredientList]?
   let recipe_step_lists: [StepList]?
   let web_view: String?
+  let usdz: String?
 
   func containsKeyword(_ keyword: String) -> Bool {
     [title, summary]

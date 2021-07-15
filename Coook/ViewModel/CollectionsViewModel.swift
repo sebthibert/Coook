@@ -17,8 +17,18 @@ class CollectionsViewModel: ObservableObject {
       .sink(
         receiveCompletion: { _ in },
         receiveValue: { collections in
-        self.featuredCollection = collections.first
-        self.allCollections = Array(collections.dropFirst())
+        
+        //insert egg recipe into main course collection
+        
+        let adjusted: [Collection] = collections.map { collection in
+          if collection.title == "Main Courses" {
+          return collection.adding(recipeId: 1234)
+        }
+          return collection
+        }
+        
+        self.featuredCollection = adjusted.first
+        self.allCollections = Array(adjusted.dropFirst())
       }
       )
   }
