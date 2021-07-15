@@ -9,11 +9,8 @@ struct LinkSparksView: View {
         .resizable()
         .scaledToFill()
         .ignoresSafeArea(.container, edges: [.top])
-      Text("Connect your Sparks account")
-        .font(.title2)
-        .bold()
-      Text("Link your Sparks account to get exclusive food offers and the best recipes")
-        .font(.body)
+      RoundedText(text: "Connect your Sparks account", style: .title2, weight: .bold)
+      RoundedText(text: "Link your Sparks account to get exclusive food offers and the best recipes", style: .body, weight: .regular)
         .padding()
         .multilineTextAlignment(.center)
       Spacer()
@@ -21,9 +18,13 @@ struct LinkSparksView: View {
         VStack {
           connectButton.frame(width: proxy.size.width)
             .background(.black)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
           joinButton
             .frame(width: proxy.size.width)
-            .border(.black, width: 2)
+            .overlay(
+              RoundedRectangle(cornerRadius: 10)
+                .stroke(.black, lineWidth: 1)
+            )
         }
       }
       .padding()
@@ -35,9 +36,8 @@ struct LinkSparksView: View {
     Button {
       viewModel.connectSparks()
     } label: {
-      Text("Connect")
+      RoundedText(text: "Connect", style: .body, weight: .bold)
         .foregroundColor(.white)
-        .bold()
     }
     .padding()
     .contentShape(Rectangle())
@@ -48,7 +48,7 @@ struct LinkSparksView: View {
     Button {
       viewModel.joinSparks()
     } label: {
-      Text("Not a member? Join Sparks")
+      RoundedText(text: "Not a member? Join Sparks", style: .body, weight: .regular)
         .foregroundColor(.black)
     }
     .padding()

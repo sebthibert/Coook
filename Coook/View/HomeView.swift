@@ -43,9 +43,8 @@ struct HomeView: View {
           Image(uiImage: UIImage(named: "logo")!)
             .padding()
             .frame(height: 22)
-          Text("Join for exclusive benefits & recipes")
+          RoundedText(text: "Join for exclusive benefits & recipes", style: .subheadline, weight: .medium)
             .foregroundColor(.white)
-            .font(.subheadline)
             .multilineTextAlignment(.center)
         }
         Spacer()
