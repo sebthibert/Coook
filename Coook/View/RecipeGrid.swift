@@ -8,14 +8,22 @@ struct RecipeGrid: View {
 
   var body: some View {
     ScrollView {
-      LazyVGrid(columns: [GridItem(alignment: .top), GridItem(alignment: .top)]) {
-        ForEach(allRecipes) { recipe in
-          let viewModel = RecipeViewModel(recipe: recipe)
-          RecipeGridItem(viewModel: viewModel)
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+      if recipes.isEmpty {
+        EmptyRecipeGrid(description: "You don't have any recipes in your favourites yet!", imageName: "heart", instruction: "to add a recipe to favourites.")
+      } else {
+        if allRecipes.isEmpty {
+          EmptyRecipeGrid(description: "No search results for: \(searchText)", imageName: nil, instruction: nil)
+        } else {
+          LazyVGrid(columns: [GridItem(alignment: .top), GridItem(alignment: .top)]) {
+            ForEach(allRecipes) { recipe in
+              let viewModel = RecipeViewModel(recipe: recipe)
+              RecipeGridItem(viewModel: viewModel)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            }
+          }
+          .padding()
         }
       }
-      .padding()
     }
     .background(Color(.systemGroupedBackground))
     .navigationBarTitle(Text(title))

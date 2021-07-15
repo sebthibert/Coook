@@ -35,7 +35,7 @@
 		BC193CD9269F05E000390B47 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CD8269F05E000390B47 /* ShoppingListViewModel.swift */; };
 		BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDA269F05F900390B47 /* ShoppingListRow.swift */; };
 		BC193CDD269F062600390B47 /* ShoppingListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDC269F062600390B47 /* ShoppingListsView.swift */; };
-		BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */; };
+		BC193CDF269F210700390B47 /* EmptyRecipeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC193CDE269F210700390B47 /* EmptyRecipeGrid.swift */; };
 		BC6D0F2926A033BA00B74E8A /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2826A033BA00B74E8A /* IngredientView.swift */; };
 		BC6D0F2B26A033E500B74E8A /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2A26A033E500B74E8A /* FocusedView.swift */; };
 		BC6D0F2D26A033F600B74E8A /* StepVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6D0F2C26A033F600B74E8A /* StepVStack.swift */; };
@@ -110,7 +110,7 @@
 		BC193CD8269F05E000390B47 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
 		BC193CDA269F05F900390B47 /* ShoppingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListRow.swift; sourceTree = "<group>"; };
 		BC193CDC269F062600390B47 /* ShoppingListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListsView.swift; sourceTree = "<group>"; };
-		BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyShoppingListView.swift; sourceTree = "<group>"; };
+		BC193CDE269F210700390B47 /* EmptyRecipeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecipeGrid.swift; sourceTree = "<group>"; };
 		BC6D0F2826A033BA00B74E8A /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		BC6D0F2A26A033E500B74E8A /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		BC6D0F2C26A033F600B74E8A /* StepVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepVStack.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 				BC193CCE269EF03100390B47 /* ActivityViewController.swift */,
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
-				BC193CDE269F210700390B47 /* EmptyShoppingListView.swift */,
+				BC193CDE269F210700390B47 /* EmptyRecipeGrid.swift */,
 				BC87669226A06C9A003272DA /* FavouritesView.swift */,
 				BC6D0F2A26A033E500B74E8A /* FocusedView.swift */,
 				BC8A7C78268C6E3100D851F8 /* HomeView.swift */,
@@ -429,7 +429,7 @@
 				BC6D0F2B26A033E500B74E8A /* FocusedView.swift in Sources */,
 				BC193CAF269ECC7A00390B47 /* Recipe.swift in Sources */,
 				BC193CDB269F05F900390B47 /* ShoppingListRow.swift in Sources */,
-				BC193CDF269F210700390B47 /* EmptyShoppingListView.swift in Sources */,
+				BC193CDF269F210700390B47 /* EmptyRecipeGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
