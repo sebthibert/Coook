@@ -5,11 +5,12 @@ import ARKit
 struct ARView: View {
   @Environment(\.presentationMode) var presentationMode
   var body: some View {
-    ZStack {
+    ZStack(alignment: .bottomTrailing) {
       ARQuickLookView()
-      Button("Dismiss Modal") {
+      Button("Close") {
         presentationMode.wrappedValue.dismiss()
       }
+      .padding()
     }
   }
 }
@@ -27,22 +28,17 @@ struct ARQuickLookView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ controller: QLPreviewController,
-                                context: Context) {
+context: Context) {
     }
     
     class Coordinator: NSObject, QLPreviewControllerDataSource {
-        private lazy var fileURL: URL = Bundle.main.url(forResource: "egg2",
-                                                        withExtension: "usdz")!
+        private lazy var fileURL: URL = Bundle.main.url(forResource: "egg2", withExtension: "usdz")!
       
         func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
             return 1
         }
         
-     
-        func previewController(
-            _ controller: QLPreviewController,
-            previewItemAt index: Int
-        ) -> QLPreviewItem {
+        func previewController(_ controller: QLPreviewController,previewItemAt index: Int) -> QLPreviewItem {
             let item = ARQuickLookPreviewItem(fileAt: fileURL)
             item.allowsContentScaling = false
             return item

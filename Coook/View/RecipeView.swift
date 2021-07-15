@@ -11,8 +11,6 @@ struct RecipeView: View {
   var body: some View {
     ScrollView {
       VStack {
-        
-        
         LoadingImage(imageSize: nil, cornerRadius: 0, viewModel: viewModel.loadingImageViewModel)
           .scaledToFill()
         
