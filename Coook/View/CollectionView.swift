@@ -25,8 +25,8 @@ struct CollectionView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         }
       }
+      .padding()
     }
-    .padding()
     .background(Color(.systemGroupedBackground))
     .navigationBarTitle(Text(viewModel.title))
     .searchable(text: $searchText)
