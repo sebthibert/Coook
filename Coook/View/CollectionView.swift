@@ -18,25 +18,11 @@ struct CollectionView: View {
 
   var body: some View {
     ScrollView {
-      ForEach(sectionedRecipes) { section in
-        VStack {
-          HStack {
-            Text("\(section.mins)m")
-              .bold()
-              .padding()
-            Image(systemName: "clock")
-            Spacer()
-          }
-          .background(.white)
-          .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-          .padding([.top, .bottom])
-          LazyVGrid(columns: [GridItem(alignment: .top), GridItem(alignment: .top)]) {
-            ForEach(section.recipes) { recipe in
-              let viewModel = RecipeViewModel(recipe: recipe)
-              RecipeGridItem(viewModel: viewModel)
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-            }
-          }
+      LazyVGrid(columns: [GridItem(alignment: .top), GridItem(alignment: .top)]) {
+        ForEach(allRecipes) { recipe in
+          let viewModel = RecipeViewModel(recipe: recipe)
+          RecipeGridItem(viewModel: viewModel)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         }
       }
     }
@@ -45,6 +31,7 @@ struct CollectionView: View {
     .navigationBarTitle(Text(viewModel.title))
     .searchable(text: $searchText)
   }
+
 
   var sectionedRecipes: [RecipeSection] {
     let sorted = allRecipes.sorted { left, right in

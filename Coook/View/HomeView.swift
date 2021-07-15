@@ -2,7 +2,9 @@ import SwiftUI
 
 struct HomeView: View {
   @ObservedObject var viewModel: CollectionsViewModel
+
   @State private var searchText = ""
+  @State private var isPresentingProfile = false
   
   var body: some View {
     List {
@@ -25,6 +27,18 @@ struct HomeView: View {
       viewModel.getCollections()
     }
     .searchable(text: $searchText)
+    .navigationBarItems(trailing: profileButton)
+    .sheet(isPresented: $isPresentingProfile) {
+      ProfileView(viewModel: ProfileViewModel())
+    }
+  }
+
+  var profileButton: some View {
+    Button {
+      isPresentingProfile = true
+    } label: {
+      Image(systemName: "person.circle")
+    }
   }
 
   var allCollections: [Collection] {
