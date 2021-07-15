@@ -56,7 +56,6 @@
 		DDC1CA2726A035F10055FBE7 /* LinkSparksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2626A035F10055FBE7 /* LinkSparksView.swift */; };
 		DDC1CA2926A0361C0055FBE7 /* LinkSparksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2826A0361C0055FBE7 /* LinkSparksViewModel.swift */; };
 		F1F5B62526A0514C005585D2 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5B62426A0514C005585D2 /* ARView.swift */; };
-		F1F5B62726A06EAF005585D2 /* egg2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F1F5B62626A06EAE005585D2 /* egg2.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,7 +134,6 @@
 		DDC1CA2626A035F10055FBE7 /* LinkSparksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSparksView.swift; sourceTree = "<group>"; };
 		DDC1CA2826A0361C0055FBE7 /* LinkSparksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSparksViewModel.swift; sourceTree = "<group>"; };
 		F1F5B62426A0514C005585D2 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = SOURCE_ROOT; };
-		F1F5B62626A06EAE005585D2 /* egg2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = egg2.usdz; path = ../../o/egg2.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +266,6 @@
 				BC8A7C76268C6E3100D851F8 /* CoookApp.swift */,
 				BC193CC4269ED9E600390B47 /* UserDefaultsRecipes.swift */,
 				BC193CD4269F05A000390B47 /* UserDefaultsShoppingLists.swift */,
-				F1F5B62626A06EAE005585D2 /* egg2.usdz */,
 				BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */,
 				BC8A7C7C268C6E3200D851F8 /* Preview Content */,
 			);
@@ -380,7 +377,6 @@
 			files = (
 				BC8A7C7E268C6E3200D851F8 /* Preview Assets.xcassets in Resources */,
 				BC8A7C85268C8FC600D851F8 /* recipes.json in Resources */,
-				F1F5B62726A06EAF005585D2 /* egg2.usdz in Resources */,
 				BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

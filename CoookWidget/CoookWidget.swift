@@ -83,7 +83,23 @@ struct CoookWidgetEntryView : View {
         RoundedText(text: "DINNER PARTY", style: .body, weight: .heavy)
       }
     case .systemExtraLarge:
-      Text("XL")
+      HStack(alignment: .top) {
+        Image("luigi")
+          .resizable()
+          .scaledToFit()
+        VStack(alignment: .leading, spacing: 8) {
+          RoundedText(text: "LUIGIS RECIPE OF THE DAY", style: .caption, weight: .heavy)
+          RoundedText(text: entry.recipe.title, style: .body, weight: .heavy)
+          Image("meatball")
+            .resizable()
+            .scaledToFit()
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+          RoundedText(text: "Serves 4", style: .caption, weight: .heavy)
+            .foregroundColor(.secondary)
+        }
+        .padding()
+        Spacer()
+      }
     @unknown default:
       fatalError("New size added")
     }
