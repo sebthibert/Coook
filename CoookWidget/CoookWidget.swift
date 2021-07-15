@@ -10,31 +10,31 @@ let recipe = Recipe(id: 1, title: "Tagliatelle with meatballs")
 
 struct Provider: TimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(family: context.family, recipe: recipe)
+    SimpleEntry(recipe: recipe)
   }
 
   func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-    let entry = SimpleEntry(family: context.family, recipe: recipe)
+    let entry = SimpleEntry(recipe: recipe)
     completion(entry)
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    let timeline = Timeline(entries: [SimpleEntry(family: context.family, recipe: recipe)], policy: .atEnd)
+    let timeline = Timeline(entries: [SimpleEntry(recipe: recipe)], policy: .atEnd)
     completion(timeline)
   }
 }
 
 struct SimpleEntry: TimelineEntry {
   let date = Date()
-  let family: WidgetFamily
   let recipe: Recipe
 }
 
 struct CoookWidgetEntryView : View {
   let entry: Provider.Entry
+  @Environment(\.widgetFamily) var family
 
   var body: some View {
-    switch entry.family {
+    switch family {
     case .systemSmall:
       ZStack {
         Image("meatball")
@@ -105,7 +105,7 @@ struct CoookWidget: Widget {
 
 struct CoookWidget_Previews: PreviewProvider {
   static var previews: some View {
-    CoookWidgetEntryView(entry: SimpleEntry(family: .systemMedium, recipe: recipe))
+    CoookWidgetEntryView(entry: SimpleEntry(recipe: recipe))
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }
