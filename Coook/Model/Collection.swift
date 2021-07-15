@@ -14,6 +14,18 @@ struct Collection: Codable, Identifiable {
   var trimmedDescription: String? {
     description?.trimmingCharacters(in: .whitespacesAndNewlines)
   }
+  
+  func adding(recipeId: Int) -> Collection {
+    Collection(id: id,
+               title: title,
+               description: description,
+               slug: slug,
+               position: position,
+               featured: featured,
+               img: img,
+               hidden: hidden,
+               recipes: (recipes ?? []) + [recipeId])
+  }
 
   struct Image: Codable {
     let urls: ImageURLs?

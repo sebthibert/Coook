@@ -42,6 +42,8 @@
 		BC8A7C7E268C6E3200D851F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7D268C6E3200D851F8 /* Preview Assets.xcassets */; };
 		BC8A7C85268C8FC600D851F8 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C84268C8FC600D851F8 /* recipes.json */; };
 		DDC1CA25269EFACD0055FBE7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = DDC1CA24269EFACD0055FBE7 /* Algorithms */; };
+		F1F5B62326A0441B005585D2 /* egg2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F1F5B62226A0441B005585D2 /* egg2.usdz */; };
+		F1F5B62526A0514C005585D2 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5B62426A0514C005585D2 /* ARView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8A7C7D268C6E3200D851F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC8A7C84268C8FC600D851F8 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
+		F1F5B62226A0441B005585D2 /* egg2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = egg2.usdz; sourceTree = "<group>"; };
+		F1F5B62426A0514C005585D2 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		BC193CB0269ECC8300390B47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1F5B62426A0514C005585D2 /* ARView.swift */,
 				BC193CCE269EF03100390B47 /* ActivityViewController.swift */,
 				BC193CC0269ECD6E00390B47 /* CollectionRow.swift */,
 				BC193CBC269ECD4500390B47 /* CollectionView.swift */,
@@ -171,6 +176,7 @@
 				BC8A7C76268C6E3100D851F8 /* CoookApp.swift */,
 				BC193CC4269ED9E600390B47 /* UserDefaultsRecipes.swift */,
 				BC193CD4269F05A000390B47 /* UserDefaultsShoppingLists.swift */,
+				F1F5B62226A0441B005585D2 /* egg2.usdz */,
 				BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */,
 				BC8A7C7C268C6E3200D851F8 /* Preview Content */,
 			);
@@ -251,6 +257,7 @@
 			files = (
 				BC8A7C7E268C6E3200D851F8 /* Preview Assets.xcassets in Resources */,
 				BC8A7C85268C8FC600D851F8 /* recipes.json in Resources */,
+				F1F5B62326A0441B005585D2 /* egg2.usdz in Resources */,
 				BC8A7C7B268C6E3200D851F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +290,7 @@
 				BC193CD9269F05E000390B47 /* ShoppingListViewModel.swift in Sources */,
 				BC193CB9269ECD0900390B47 /* RecipeView.swift in Sources */,
 				BC193CA8269ECC1B00390B47 /* ProgressBar.swift in Sources */,
+				F1F5B62526A0514C005585D2 /* ARView.swift in Sources */,
 				BC193CB7269ECCE000390B47 /* TimersViewModel.swift in Sources */,
 				BC193CDD269F062600390B47 /* ShoppingListsView.swift in Sources */,
 				BC193CD1269EF04700390B47 /* ShareSheetModifer.swift in Sources */,
@@ -423,6 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coook/Preview Content\"";
+				DEVELOPMENT_TEAM = NFMS47Q82G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -452,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coook/Preview Content\"";
+				DEVELOPMENT_TEAM = NFMS47Q82G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

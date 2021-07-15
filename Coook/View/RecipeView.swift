@@ -6,12 +6,29 @@ struct RecipeView: View {
   @State var isFavourited: Bool = false
   @State var isShoppingListSaved: Bool = false
   @State var showShareSheet = false
+  @State private var showARView = false
 
   var body: some View {
     ScrollView {
       VStack {
+        
+        
         LoadingImage(imageSize: nil, cornerRadius: 0, viewModel: viewModel.loadingImageViewModel)
           .scaledToFill()
+        
+        if viewModel.recipe.usdz != nil{
+          Button {
+            showARView.toggle()
+          } label: {
+            HStack {
+              Spacer()
+              RoundedText(text: "View in AR", style: .callout, weight: .bold)
+              Image(systemName: "arkit")
+            }
+            .padding()
+          }
+        }
+        
         VStack(alignment: .leading, spacing: 32) {
           if let title = viewModel.recipe.title {
             RoundedText(text: title, style: .largeTitle, weight: .heavy)
@@ -19,6 +36,7 @@ struct RecipeView: View {
           if let summary = viewModel.recipe.summary, !summary.isEmpty {
             RoundedText(text: summary, style: .callout, weight: .regular)
           }
+          
           if let ingredientLists = viewModel.recipe.ingredientListsWithIngredients {
             IngredientsView(isEditable: false, ingredientLists: ingredientLists)
           }
@@ -65,6 +83,7 @@ struct RecipeView: View {
       TimersView(viewModel: viewModel)
     }
     )
+    .fullScreenCover(isPresented: $showARView, content: ARView.init)
   }
 
   func toggleFavourite() {
