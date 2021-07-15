@@ -1,3 +1,5 @@
+import CoreSpotlight
+import MobileCoreServices
 import SwiftUI
 
 struct RecipeView: View {
@@ -35,6 +37,7 @@ struct RecipeView: View {
     .onAppear {
       isFavourited = UserDefaults.isRecipeFavourited(viewModel.recipe)
       viewModel.loadingImageViewModel.getImage(path: viewModel.recipe.photo?.urls?.medium)
+      spotlightIndex()
     }
     .navigationBarTitleDisplayMode(.inline)
     .navigationBarItems(trailing:
@@ -71,6 +74,22 @@ struct RecipeView: View {
     } else {
       UserDefaults.setFavourite(recipe: viewModel.recipe)
       isFavourited = true
+    }
+  }
+
+  func spotlightIndex() {
+    let attributeSet = CSSearchableItemAttributeSet(itemContentType: "UTTypeText")
+    attributeSet.title = viewModel.recipe.title
+    attributeSet.contentDescription = viewModel.recipe.summary ?? "Get cooking with this simple easy delicious recipe!"
+    attributeSet.thumbnailData = viewModel.loadingImageViewModel.imageData
+
+    let item = CSSearchableItem(uniqueIdentifier: String(viewModel.recipe.id), domainIdentifier: "com.coook", attributeSet: attributeSet)
+    CSSearchableIndex.default().indexSearchableItems([item]) { error in
+      if let error = error {
+        print("Indexing error: \(error.localizedDescription)")
+      } else {
+        print("Search item successfully indexed!")
+      }
     }
   }
 }
