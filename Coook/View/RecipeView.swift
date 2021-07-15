@@ -50,11 +50,13 @@ struct RecipeView: View {
         Image(systemName: "square.and.arrow.up")
       })
         .shareSheet(showShareSheet: $showShareSheet, items: [viewModel.shareString])
-      Button(action: {
-        showingTimerSheet.toggle()
-      }, label: {
-        Image(systemName: "timer")
-      })
+      if viewModel.hasTimers {
+        Button(action: {
+          showingTimerSheet.toggle()
+        }, label: {
+          Image(systemName: "timer")
+        })
+      }
     }
                           .sheet(isPresented: $showingTimerSheet) {
       TimersView(viewModel: viewModel)

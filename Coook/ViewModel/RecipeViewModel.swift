@@ -13,4 +13,8 @@ class RecipeViewModel: ObservableObject {
   var shareString: String {
     recipe.web_view ?? ""
   }
+
+  var hasTimers: Bool {
+    recipe.recipeStepListsWithSteps.flatMap { $0.stepsWithTimers }.contains { $0.hasTimer }
+  }
 }
