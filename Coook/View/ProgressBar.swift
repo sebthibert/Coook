@@ -21,15 +21,13 @@ struct ProgressBar: View {
     let hoursInt = timeRemaining / 3600
     let minutesInt = (timeRemaining % 3600) / 60
     let secondsInt = (timeRemaining % 3600) % 60
-    var string = ""
     if showHours {
-      string = String(hoursInt) + ":"
+      return String(hoursInt) + ":" + String(format: "%02d", minutesInt) + ":" + String(format: "%02d", secondsInt)
+    } else if showMins {
+      return String(format: "%02d", minutesInt) + ":" + String(format: "%02d", secondsInt)
+    } else {
+      return String(format: "%02d", secondsInt)
     }
-    if showMins {
-      string += String(format: "%02d", minutesInt) + ":"
-    }
-    string += String(format: "%02d", secondsInt)
-    return string
   }
 
   var body: some View {
