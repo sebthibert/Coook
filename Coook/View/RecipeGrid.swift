@@ -27,7 +27,9 @@ struct RecipeGrid: View {
     }
     .background(Color(.systemGroupedBackground))
     .navigationBarTitle(Text(title))
-    .searchable(text: $searchText)
+    .if(recipes.isEmpty == false) { view in
+      view.searchable(text: $searchText)
+    }
   }
 
   var sectionedRecipes: [RecipeSection] {
