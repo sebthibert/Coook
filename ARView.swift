@@ -7,12 +7,12 @@ struct ARView: View {
   var body: some View {
     ZStack(alignment: .bottomTrailing) {
       ARQuickLookView()
+        .edgesIgnoringSafeArea(.all)
       Button("Close") {
         presentationMode.wrappedValue.dismiss()
       }
       .padding()
     }
-    .edgesIgnoringSafeArea(.all)
   }
 }
 
