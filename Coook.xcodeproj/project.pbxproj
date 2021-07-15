@@ -50,8 +50,8 @@
 		BC8A7C7E268C6E3200D851F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C7D268C6E3200D851F8 /* Preview Assets.xcassets */; };
 		BC8A7C85268C8FC600D851F8 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8A7C84268C8FC600D851F8 /* recipes.json */; };
 		DDC1CA25269EFACD0055FBE7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = DDC1CA24269EFACD0055FBE7 /* Algorithms */; };
-		DDC1CA2726A035F10055FBE7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2626A035F10055FBE7 /* ProfileView.swift */; };
-		DDC1CA2926A0361C0055FBE7 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2826A0361C0055FBE7 /* ProfileViewModel.swift */; };
+		DDC1CA2726A035F10055FBE7 /* LinkSparksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2626A035F10055FBE7 /* LinkSparksView.swift */; };
+		DDC1CA2926A0361C0055FBE7 /* LinkSparksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1CA2826A0361C0055FBE7 /* LinkSparksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +123,8 @@
 		BC8A7C7A268C6E3200D851F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8A7C7D268C6E3200D851F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC8A7C84268C8FC600D851F8 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
-		DDC1CA2626A035F10055FBE7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		DDC1CA2826A0361C0055FBE7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		DDC1CA2626A035F10055FBE7 /* LinkSparksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSparksView.swift; sourceTree = "<group>"; };
+		DDC1CA2826A0361C0055FBE7 /* LinkSparksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSparksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 				BC193CA5269ECBFD00390B47 /* IngredientsView.swift */,
 				BC6D0F2826A033BA00B74E8A /* IngredientView.swift */,
 				BC193C9F269ECBB400390B47 /* LoadingImage.swift */,
-				DDC1CA2626A035F10055FBE7 /* ProfileView.swift */,
+				DDC1CA2626A035F10055FBE7 /* LinkSparksView.swift */,
 				BC193CA7269ECC1B00390B47 /* ProgressBar.swift */,
 				BC193CBA269ECD3300390B47 /* RecipeGridItem.swift */,
 				BC193CB8269ECD0900390B47 /* RecipeView.swift */,
@@ -193,7 +193,7 @@
 				BC193CC2269ECD8100390B47 /* CollectionViewModel.swift */,
 				BC193CCC269EEA7D00390B47 /* FavouriteRecipesViewModel.swift */,
 				BC193CA1269ECBCB00390B47 /* LoadingImageViewModel.swift */,
-				DDC1CA2826A0361C0055FBE7 /* ProfileViewModel.swift */,
+				DDC1CA2826A0361C0055FBE7 /* LinkSparksViewModel.swift */,
 				BC193CBE269ECD5A00390B47 /* RecipeViewModel.swift */,
 				BC193CD6269F05C700390B47 /* ShoppingListsViewModel.swift */,
 				BC193CD8269F05E000390B47 /* ShoppingListViewModel.swift */,
@@ -401,7 +401,7 @@
 				BC193CA2269ECBCB00390B47 /* LoadingImageViewModel.swift in Sources */,
 				BC193CBD269ECD4500390B47 /* CollectionView.swift in Sources */,
 				BC193CBF269ECD5A00390B47 /* RecipeViewModel.swift in Sources */,
-				DDC1CA2926A0361C0055FBE7 /* ProfileViewModel.swift in Sources */,
+				DDC1CA2926A0361C0055FBE7 /* LinkSparksViewModel.swift in Sources */,
 				BC193CD9269F05E000390B47 /* ShoppingListViewModel.swift in Sources */,
 				BC6D0F2926A033BA00B74E8A /* IngredientView.swift in Sources */,
 				BC193CB9269ECD0900390B47 /* RecipeView.swift in Sources */,
@@ -409,7 +409,7 @@
 				BC193CB7269ECCE000390B47 /* TimersViewModel.swift in Sources */,
 				BC193CDD269F062600390B47 /* ShoppingListsView.swift in Sources */,
 				BC193CD1269EF04700390B47 /* ShareSheetModifer.swift in Sources */,
-				DDC1CA2726A035F10055FBE7 /* ProfileView.swift in Sources */,
+				DDC1CA2726A035F10055FBE7 /* LinkSparksView.swift in Sources */,
 				BC193CBB269ECD3300390B47 /* RecipeGridItem.swift in Sources */,
 				BC8A7C77268C6E3100D851F8 /* CoookApp.swift in Sources */,
 				BC193CB5269ECCC900390B47 /* TimersView.swift in Sources */,

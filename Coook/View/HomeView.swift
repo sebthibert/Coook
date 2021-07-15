@@ -8,6 +8,13 @@ struct HomeView: View {
   
   var body: some View {
     List {
+      Section(header: Text("Sparks")) {
+        Button {
+          isPresentingProfile = true
+        } label: {
+          Text("Exclusive benefits / recipes - placeholder")
+        }
+      }
       Section(header: Text("Featured Collection")) {
         let viewModel = CollectionViewModel(collection: viewModel.featuredCollection)
         NavigationLink(destination: CollectionView(viewModel: viewModel)) {
@@ -27,17 +34,8 @@ struct HomeView: View {
       viewModel.getCollections()
     }
     .searchable(text: $searchText)
-    .navigationBarItems(trailing: profileButton)
     .sheet(isPresented: $isPresentingProfile) {
-      ProfileView(viewModel: ProfileViewModel())
-    }
-  }
-
-  var profileButton: some View {
-    Button {
-      isPresentingProfile = true
-    } label: {
-      Image(systemName: "person.circle")
+      LinkSparksView(viewModel: LinkSparksViewModel())
     }
   }
 
